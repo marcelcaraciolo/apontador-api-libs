@@ -6,23 +6,23 @@ Esta é uma biblioteca minimalista de acesso à Apontador API. Ela encapsula as 
 
 Exemplo de uso (buscando informações de um local específico):
 
-  $apontadorApi = new ApontadorApi(
-                      "consumer_key",
-                      "consumer_secret",
-                      "http://endereco.do.site/pagina/de/callback.php ");
-  $place_id = "C4015454280A6U0A62";
-  $place = $apontadorApi->getPlaceById($place_id);
-  echo $place['name'];
+    $apontadorApi = new ApontadorApi(
+                          "consumer_key",
+                          "consumer_secret",
+                          "http://endereco.do.site/pagina/de/callback.php ");
+    $place_id = "C4015454280A6U0A62";
+    $place = $apontadorApi->getPlaceById($place_id);
+    echo $place['name'];
 
 É possível tratar erros de forma fácil:
 
     try {
-	    $place = $apontadorApi->getPlaceById($place_id);
-	} catch (ApontadorApiException $e) {
-		if ($e->status_code == "405" || $e->status_code == "404") {
-			$resultado = "Erro: Informe o ID";
-		}
-	}
+        $place = $apontadorApi->getPlaceById($place_id);
+    } catch (ApontadorApiException $e) {
+        if ($e->status_code == "405" || $e->status_code == "404") {
+            $resultado = "Erro: Informe o ID";
+        }
+    }
 
 
 Aplicativo-Exemplo
