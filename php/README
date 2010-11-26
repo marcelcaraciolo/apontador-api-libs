@@ -9,7 +9,7 @@ Exemplo de uso (buscando informações de um local específico):
   $apontadorApi = new ApontadorApi(
                       "consumer_key",
                       "consumer_secret",
-                      "http://endereco.do.site/pagina/de/callback.php" );
+                      "http://endereco.do.site/pagina/de/callback.php ");
   $place_id = "C4015454280A6U0A62";
   $place = $apontadorApi->getPlaceById($place_id);
   echo $place['name'];
