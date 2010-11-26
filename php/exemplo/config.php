@@ -1,6 +1,6 @@
 <?php
 /**
- * ApontadorApiConfig.php
+ * config.php
  *
  * Configurações do aplicativo que vai acessar a Apontador API via ApontadorApiLib.php
  * (podem ser obtidas no perfil do usuário "dono" do aplicativo em http://www.apontador.com.br)
